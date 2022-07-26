@@ -1,16 +1,12 @@
-from flask import Flask, jsonify, request
+from flask import Flask
 
 
 
 app = Flask(__name__)
 @app.route('/todos', methods=['GET'])
 def todos():
-    
-    todos = [
-    { "label": "My first task", "done": False },
-    { "label": "My second task", "done": False }
-]
-    return jsonify(todos)
+    json_text = flask.jsonify(some_data)
+    return '<h1>Hello!</h1>'
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=3245, debug=True)
